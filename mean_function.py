@@ -1,7 +1,5 @@
-# Week 3 Assignment 1
-# Given a function f and a closed interval [a,b]. copmute the mean value of the function on the interval using two alterative approaches:
-# 1. compute the mean over n equispaced points in the interval
-# 2. compute the mean over n random points in the interval
+# Week 3 Assignment 3
+# Apply midpoint integration to the sine function within the [0,pi] interval. Find the value of n so that the error is smaller than 1e-10.
 #
 # Authors: Oliviero Andreussi, Student
 # 
