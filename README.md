@@ -1,13 +1,13 @@
-# Week 3 Assignment 2
+# Week 3 Assignment 3
 
-Given a set of function f defined on a close interval \[a,b\], we want to compute its mean value in the interval. We can imagine two alternative algorithms:
+In the previous assignment we tested two ways to compute the average value of a function within an interval. This can be useful to estimate the definite integral of the function:
 
-1. We divide the interval into a regular set of n equispaced points. We compute the value of the function at these points and take its mean.
+<a href="https://www.codecogs.com/eqnedit.php?latex=\int_a^bf(x)dx\approx&space;(b-a)\bar{f}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\int_a^bf(x)dx\approx&space;(b-a)\bar{f}" title="\int_a^bf(x)dx\approx (b-a)\bar{f}" /></a>
 
-2. We randomly select n points within the interval. We compute the value of the function at these points and take its mean.
+However, there are less approximate ways of computing the integral of a function using a numerical algorithm. One of the simplest is the midpoint rule, where the integration domain is split into a set of regular and small intervals, and the area below the function within each interval is estimated from the value of the function in the midpoint (see the following image taken from https://tutorial.math.lamar.edu/classes/calcii/approximatingdefintegrals.aspx)
 
-Which of the two approaches gives the most accurate results?
+![midpoint rule](https://tutorial.math.lamar.edu/classes/calcii/ApproximatingDefIntegrals_Files/image001.png)
 
-TASK: Use two loops to compute the average of a function in an interval. In the first loop, the function should be evaluated on equispaced points. In the second loop, the function should be evaluated on random points, generated using the numpy.random.uniform(a,b) function. The specific function (sine) and interval (0 to pi) are coded in the assignment file.
+TASK: In the midpoint.py program you can find the basic loop to perform midpoint integration of a generic function f in a closed interval \[a,b\]. Modify the code to compute the integral of the sine function between 0 and pi. Find a value of the number n of small intervals that is needed to get a result correct up to the 4th decimal digit (i.e. the error is less than 1e-4). 
 
 EXPECTED OUTCOME: For the given function and interval, the two means should approach the value of 2/pi as the number of points n becomes large. Why is this the result? 
