@@ -6,26 +6,23 @@
 # Authors: Oliviero Andreussi, Student
 # 
 # Variables: 
-#   f: arbitrary function (in the assignment this is set to be the numpy.sin() function)
+#   f: arbitrary function
 #   a/b: left/right border of the interval
-#   n: number of points used in the calculation
-#   fmean_structured: mean from n equispaced points
-#   fmean_random: mean from n random points
-#
-# Expected Outcome: 
-#   for the given function and interval, the result should approach 2/pi as n becomes large
+#   n: number of intervals used in the calculation
+#   exact_result: analytic result of the definite integral
+#   numerical_integral: numerical result of the definite integral using midpoint rule
 #
 import numpy as np
-f=np.sin
-a=0.0
-b=np.pi
+f=
+a=
+b=
+n= 
+exact_result= # this should be the exact analytic result of the integration
 
-fmean_structured = 0.0
-fmean_random = 0.0
+dx=(b-a)/n
+numerical_integral=0.0
+for j in range(n):
+    numerical_integral+=f(a+(j+0.5)*dx)*dx
 
-# The following statements are meant to check the error of the numerical calculations with respect to the analytic result
-# The analytic result implemented only applies to the given function and interval
-error_structured = fmean_structured*np.pi - 2.0
-error_random = fmean_random*np.pi - 2.0
-print("The error of the first approach is  = {:.3e}".format(error_structured))
-print("The error of the second approach is = {:.3e}".format(error_random))
+print("With n = {:10n} points the error of midpoint integration is equal to {: .3e}".format(n,numerical_integral-exact_result))
+
