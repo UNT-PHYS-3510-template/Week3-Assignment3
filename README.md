@@ -8,6 +8,6 @@ However, there are less approximate ways of computing the integral of a function
 
 ![midpoint rule](https://tutorial.math.lamar.edu/classes/calcii/ApproximatingDefIntegrals_Files/image001.png)
 
-TASK: In the midpoint.py program you can find the basic loop to perform midpoint integration of a generic function f in a closed interval \[a,b\]. Modify the code to compute the integral of the sine function between 0 and pi. Find a value of the number n of small intervals that is needed to get a result correct up to the 4th decimal digit (i.e. the error is less than 1e-4). 
+TASK: In the midpoint.py program you can find the basic loop to perform midpoint integration of a generic function f in an interval \[a,b\]. Modify the code to compute the integral of the sine function between 0 and pi. Find a value of the number n of small intervals that is needed to get a result that is correct up to the 10th decimal digit (i.e. the error is less than 1e-10). 
 
-EXPECTED OUTCOME: For the given function and interval, the two means should approach the value of 2/pi as the number of points n becomes large. Why is this the result? 
+EXPECTED OUTCOME: The integral of sine between 0 and pi should be easy to compute analytically. The number of intervals needed to achieve the given accuracy should be about 10000. 
