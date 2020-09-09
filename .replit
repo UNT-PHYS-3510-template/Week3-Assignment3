@@ -1,2 +1,2 @@
 language = "bash"
-run = "python mean_function.py"
+run = "python midpoint.py"
